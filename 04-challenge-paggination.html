@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Challenge Pagination</title>
+
+    <style>
+      /*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+        */
+
+      /* 
+        MAIN COLOR: #087f5b
+        GREY COLOR: #343a40
+        */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --cor0: #087f5b;
+        --cor1: #099268;
+        --cor2: #343a40;
+        --cor3: #495057;
+        --cor4: #e6fcf5;
+        --cor5: #c3fae8;
+        --cor6: #bcc0c4;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: black;
+        line-height: 1;
+
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 600px;
+        /* background-color: #7f0808; */
+      }
+
+      .numbers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 400px;
+        font-weight: 600;
+      }
+
+      .number {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      .number:hover {
+        background-color: var(--cor0);
+        color: white;
+      }
+
+      .btn-next {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid var(--cor0);
+        color: var(--cor0);
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .btn-next:hover {
+        background-color: var(--cor0);
+        color: white;
+        transform: scale(110%);
+        transition: 0.2s;
+      }
+
+      .btn-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(40%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pagination">
+      <div class="btn-left btn-next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </div>
+      <div class="numbers">
+        <div class="number">1</div>
+        <div class="number">2</div>
+        <div class="number">3</div>
+        <div class="number">4</div>
+        <div class="number">5</div>
+        <div class="number">6</div>
+        <div class="number">...</div>
+        <div class="number">23</div>
+      </div>
+      <div class="btn-right btn-next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>

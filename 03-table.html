@@ -44,7 +44,38 @@
         font-family: "Inter", sans-serif;
         color: black;
         line-height: 1;
+        display: flex;
+        justify-content: center;
       }
+
+      table {
+        width: 800px; 
+        margin-top: 100px;
+        /* border: 1px solid var(--cor2); */
+        border-collapse: collapse;
+        
+      }
+
+      td, th {
+        /* border: 1px solid var(--cor2); */
+        padding: 16px 24px;
+        text-align: left;
+      }
+
+      thead th {
+        background-color: var(--cor0);
+        color: white;
+        width: 25%;
+      }
+
+      tbody tr:nth-child(odd) {        
+        background-color: #f8f9fa;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #e9ecef;
+      }
+
     </style>
   </head>
   <body>
